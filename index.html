@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+    <title>Marine Cadastre National Viewer</title>
+
+    <!-- 引入D3.js库 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <script src="../static/js/jquery.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/aea1680334.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+    <!-- width=device-width: 让视口的宽度等于设备的宽度，这样在移动设备上，页面的宽度将会根据设备的屏幕宽度进行调整 -->
+    <!-- initial-scale=1.0: 设置页面的初始缩放级别为 1.0，确保页面首次加载时以正常的比例显示，不进行缩放 -->
+    <!-- minimum-scale=1.0: 设置用户能够手动缩小页面的最小缩放级别为 1.0，防止用户将页面缩放得太小 -->
+    <!-- maximum-scale=5.0: 设置用户能够手动放大页面的最大缩放级别为 5.0，防止用户将页面放大得太大 -->
+    <!-- 这些设置有助于使网页在不同设备上有更好的可视和用户体验。通过设置视口，可以适应不同屏幕尺寸的设备，提高网站的响应性 -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>Your Website</title>
+</head>
+<body>
+<div class="navbar">
+    <div class="navbar-menu">
+        <a href="#">
+            <img class="navbar-menu-image" src="../static/image/logo.png"/>
+        </a>
+    </div>
+    <div class="navbar-title">
+        <div class="navbar-title-text">Visualization of ship trajectory</div>
+    </div>
+    <div class="navbar-mapshow">
+        <a href="#">Open in Map Viewer Classic</a>
+    </div>
+    <div class="navbar-signin">
+        <a href="#">Sign in</a>
+    </div>
+</div>
+<div class="bodyer">
+    <div class="sidebar">
+        <ul class="nav-links">
+            <li>
+                <a class="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-item">home</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="map">
+        <div id="mapid"></div>
+    </section>
+</div>
+<!-- Your website content goes here -->
+
+</body>
+<script src="../static/js/control.js"></script>
+</html>
